@@ -21,7 +21,6 @@ $(document).ready(function(){
     
     // Functionality for StopWatch.
     $('#stopwatch').on('click', function(){
-       $('#startTime').html('00:00:00');
        if(counter == 0)
        {
             a = setInterval(function()
@@ -59,7 +58,6 @@ $(document).ready(function(){
         }
     });
     $('#reset').on('click', function(){
-        $('#startTime').html('');
         $('#endTime').html('');
         clearInterval(a);                
         counter = 0;
@@ -68,7 +66,7 @@ $(document).ready(function(){
         min = 0;
     });
 
-    
+
     // Functionality for Manual Working of Clock.
     $('#setTime').on('click', function(){
         clearInterval(b);
@@ -95,7 +93,7 @@ $(document).ready(function(){
             {
                 if(manualSeconds<59)
                 {
-                    manualSeconds +=1 ;
+                    manualSeconds +=1;
                 }
                 if(manualSeconds == 59 && manualMinutes< 59)
                 {
@@ -115,7 +113,6 @@ $(document).ready(function(){
                     manualHours = 0;
                 }
                 $('.time').html(manualHours+":"+manualMinutes+":"+manualSeconds);
-            },1000);
-        
+            },1000);    
     });
 })
